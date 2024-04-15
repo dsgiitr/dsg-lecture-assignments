@@ -1,9 +1,7 @@
 # dsg-lecture-assignments
-## Assignment Submission Guidelines
-
 This is the official repository to submit dsg open assignments.
+### Assignment Submission Guidelines
 
-### Submission Requirements:
 1. submission format
     - EnrollmentNumber_Name /
         - assignment_1 /
