@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+
+
+Q2 \\
+To find $Cov(Z, W)$
+
+\begin{enumerate}
+    \item Mean of $Z$ and $W$
+   
+         $E[Z] = E[XY^3 + X^3Y] = 0$ (since the expectation of the product of independent variables is the product of their expectations).
+         $E[W] = E[XY + X^2Y + XY^2] = 0$.
+    
+    
+    
+    \item Covariance of $Z$ and $W$:
+    \begin{align*}
+        \text{Cov}(Z, W) &= E[ZW] - E[Z]E[W] \\
+        &= E[(XY^3 + X^3Y)(XY + X^2Y + XY^2)] - (0)(0) \\
+        &= E[2XY^4 + 2X^4Y^2 + 2XY^2] \\
+        &= 2E[XY^4] + 2E[X^4Y^2] + 2E[XY^2] \\
+        &= 2(0)(3) + 2(3)(1) + 2(0)(1) = 0 + 6 + 0 = 6
+    \end{align*}
+\end{enumerate}
+
+Therefore, $\text{Cov}(Z, W) = 6$.
+
+\end{document}
