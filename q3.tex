@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+
+\author{}
+\date{}
+
+
+
+
+
+\section*{Proof}
+Let $S = X_1 + X_2 + \ldots + X_n$. By Chebyshev's Inequality,
+\[
+P\left(\left|\frac{S}{n} - \mu\right| \geq \epsilon\right) \leq \frac{\text{Var}(S)}{n^2 \epsilon^2}.
+\]
+
+Since the random variables $X_i$ are i.i.d.,
+\[
+\text{Var}(S) = \text{Var}(X_1) + \text{Var}(X_2) + \ldots + \text{Var}(X_n) = n \sigma^2.
+\]
+
+Substituting this into the inequality above,
+\[
+P\left(\left|\frac{S}{n} - \mu\right| \geq \epsilon\right) \leq \frac{\sigma^2}{n \epsilon^2}.
+\]
+
+To match with Chebyshev's inequality, we choose $k\sigma$ as the distance from the mean $\mu$, where $\sigma = \frac{\sigma}{\sqrt{n}}$ is the standard deviation of the sample mean:
+\[
+k\frac{\sigma}{\sqrt{n}} = \epsilon \Rightarrow k = \frac{\sqrt{n} \epsilon}{\sigma}.
+\]
+
+Therefore, we have:
+\[
+P\left(\left|\frac{S}{n} - \mu\right| \geq \epsilon\right) \leq \frac{\sigma^2}{n \epsilon^2} = \frac{1}{k^2}.
+\]
+
+As $n$ approaches infinity, the probability tends to zero:
+\[
+\lim_{n \to \infty} P\left(\left|\frac{S}{n} - \mu\right| \geq \epsilon\right) = 0.
+\]
+
+This proves the Weak Law of Large Numbers.
+
+\end{document}
